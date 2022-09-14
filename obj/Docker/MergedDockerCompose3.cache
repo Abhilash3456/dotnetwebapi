@@ -1,0 +1,30 @@
+services:
+  webapplication123:
+    build:
+      context: C:\Users\Abhilash\newcode1\WebApplication123
+      dockerfile: WebApplication123/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: webapplication123
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Abhilash\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Abhilash\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  webapplication1234:
+    build:
+      context: C:\Users\Abhilash\newcode1\WebApplication123
+      dockerfile: WebApplication1234/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: webapplication1234
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\Abhilash\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Abhilash\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
